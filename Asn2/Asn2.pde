@@ -39,6 +39,22 @@ void calcHists(PImage img){
   }
 }
 
+/*Method that creates a copy of original given image for testing.
+**Args: width, height, color
+**Output: Returns a copy image
+*/
+PImage makeTestImage(int w, int h, color c){
+  //Make a test image of width w, height h, and RGB coloring.
+  PImage target = createImage(w, h, RGB);
+  //Set all pixel values to c
+  for(int y = 0; y < target.height; y++){
+    for(int x = 0; x < target.width; x++){
+      target.set(x, y, c);
+    }
+  }
+  return target;//Return the image
+}
+
 /*Method to provide keystroke funtionality for the user*/
 void keyReleased(){
   if(key == '1'){
@@ -65,6 +81,12 @@ void keyReleased(){
   else if(key == 'c'){
     //Display cumulative histogram for debugging
   }
+}
+
+/*Method to display pixel values and counts as the mouse moves over
+**the histogram.
+*/
+void mouseMoved(){
   
 }
 
