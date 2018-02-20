@@ -2,6 +2,7 @@ int[] rCounts = new int[256];  //bins for red histogram
 int[] gCounts = new int[256];  //bins for green histogram
 int[] bCounts = new int[256];  //bins for blue histogram
 String fname = "";//Global String variable for file
+//Variables to hold original and changed images
 PImage img, stretchedImage, equImage;
 
 
