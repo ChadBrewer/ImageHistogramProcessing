@@ -1,9 +1,9 @@
 int[] rCounts = new int[256];  //bins for red histogram
 int[] gCounts = new int[256];  //bins for green histogram
 int[] bCounts = new int[256];  //bins for blue histogram
-String fname = "";//Global String variable for file
+String fname = "Image/emptyroad.jpg";//Global String variable for file
 //Variables to hold original and changed images
-PImage img, stretchedImage, equImage;
+PImage img, stretchedImage, equImage, currentImg;
 
 
 void setup(){
@@ -11,6 +11,7 @@ void setup(){
 }
 
 void draw(){
+  image(currentImg, 0, 0);
   
 }
 
@@ -58,7 +59,8 @@ PImage makeTestImage(int w, int h, color c){
 /*Method to provide keystroke funtionality for the user*/
 void keyReleased(){
   if(key == '1'){
-    //Display original image    
+    //Display original image  
+    currentImg = img;
   }
   else if(key == '2'){
     //Display stretched image, histogram stretch from class.
